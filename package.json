@@ -1,0 +1,32 @@
+{
+  "name": "hono-tickets-app",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "generate": "bunx drizzle-kit generate",
+    "migrate": "bunx drizzle-kit migrate",
+    "lint": "biome check src",
+    "format": "biome check --write src",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.1",
+    "@libsql/client": "^0.14.0",
+    "drizzle-orm": "^0.35.2",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^4.6.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "^1.1.11",
+    "drizzle-kit": "^0.26.2",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "biome check --write src --no-errors-on-unmatched"
+    ]
+  
+  }
+}

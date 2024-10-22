@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1729527167210,
+      "tag": "0000_elite_gambit",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1729527319805,
+      "tag": "0001_jazzy_wolfpack",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1729547071058,
+      "tag": "0002_ambiguous_butterfly",
+      "breakpoints": true
+    }
+  ]
+}
