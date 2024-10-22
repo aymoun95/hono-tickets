@@ -9,5 +9,5 @@ export const requireAuth = createMiddleware<AppBindings>(async (c, next) => {
 		throw new NotAuthorizedError();
 	}
 
-	next();
+	await next();
 });

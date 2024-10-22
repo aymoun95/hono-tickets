@@ -9,14 +9,32 @@ import {
 	logoutRouter,
 	registerRouter,
 } from "./routes/auth";
+import {
+	deleteTicketRouter,
+	listTicketsRouter,
+	newTicketRouter,
+	showTicketsRouter,
+	updateTicketRouter,
+} from "./routes/tickets";
 
 const app = new AppBindingsHono({ strict: false });
 
 app.use(logger());
 app.use("/admin/*", currentUser);
 
-const routes = [currentUserRouter, loginRouter, registerRouter, logoutRouter];
-const protectedRoutes: AppBindingsHono[] = [];
+const routes = [
+	currentUserRouter,
+	loginRouter,
+	registerRouter,
+	logoutRouter,
+	listTicketsRouter,
+	showTicketsRouter,
+];
+const protectedRoutes = [
+	newTicketRouter,
+	updateTicketRouter,
+	deleteTicketRouter,
+];
 
 routes.forEach((route) => {
 	app.route("/", route);

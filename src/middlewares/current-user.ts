@@ -8,11 +8,11 @@ export const currentUser = createMiddleware(async (c, next) => {
 		const cookie = getCookie(c, "token");
 
 		if (!cookie) {
-			return next();
+			return await next();
 		}
 		const decodedPayload = await verify(cookie, env.JWT_KEY);
 
 		c.set("user", decodedPayload);
 	} catch (error) {}
-	next();
+	await next();
 });

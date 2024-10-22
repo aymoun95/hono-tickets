@@ -1,6 +1,5 @@
-import { AppBindingsHono } from "@/lib/types";
-
-const newTicketRouter = new AppBindingsHono();
-
-// const createTicketSchema=
-// newTicketRouter.post("/ticket", requireAuth,zValidator("json",) (c) => {});
+export { newTicketRouter } from "./new";
+export { listTicketsRouter } from "./list";
+export { showTicketsRouter } from "./show";
+export { updateTicketRouter } from "./update";
+export { deleteTicketRouter } from "./delete";

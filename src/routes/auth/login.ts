@@ -1,5 +1,5 @@
 import db from "@/db";
-import { usersTable } from "@/db/schema/users";
+import { insertUserSchema, usersTable } from "@/db/schema/users";
 import { BadRequestError } from "@/errors/bad-request-error";
 import { env } from "@/lib/config";
 import { Password } from "@/lib/password";
@@ -8,14 +8,10 @@ import { zValidator } from "@hono/zod-validator";
 import { eq } from "drizzle-orm";
 import { setCookie } from "hono/cookie";
 import { sign } from "hono/jwt";
-import { z } from "zod";
 
 const loginRouter = new AppBindingsHono();
 
-const loginSchema = z.object({
-	email: z.string().email(),
-	password: z.string(),
-});
+const loginSchema = insertUserSchema.pick({ email: true, password: true });
 
 loginRouter.post("/login", zValidator("form", loginSchema), async (c) => {
 	const { email, password } = c.req.valid("form");
