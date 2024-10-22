@@ -1,7 +1,7 @@
 import db from "@/db";
 import { ticketsTable } from "@/db/schema/tickets";
 import { NotFoundError } from "@/errors/not-found-error";
-import { AppBindingsHono } from "@/lib/types";
+import { AppBindingsHono } from "@/lib/AppBindingsHono";
 import { eq } from "drizzle-orm";
 
 const showTicketsRouter = new AppBindingsHono();

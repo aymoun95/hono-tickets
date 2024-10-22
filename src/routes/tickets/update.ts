@@ -1,7 +1,7 @@
 import db from "@/db";
 import { insertTicketsSchema, ticketsTable } from "@/db/schema/tickets";
 import { NotFoundError } from "@/errors/not-found-error";
-import { AppBindingsHono } from "@/lib/types";
+import { AppBindingsHono } from "@/lib/AppBindingsHono";
 import { requireAuth } from "@/middlewares/require-auth";
 import { zValidator } from "@hono/zod-validator";
 import { eq } from "drizzle-orm";

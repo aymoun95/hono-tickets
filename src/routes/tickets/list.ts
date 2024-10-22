@@ -1,6 +1,6 @@
 import db from "@/db";
 import { ticketsTable } from "@/db/schema/tickets";
-import { AppBindingsHono } from "@/lib/types";
+import { AppBindingsHono } from "@/lib/AppBindingsHono";
 
 const listTicketsRouter = new AppBindingsHono();
 

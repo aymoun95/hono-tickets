@@ -1,4 +1,4 @@
-import { AppBindingsHono } from "@/lib/types";
+import { AppBindingsHono } from "@/lib/AppBindingsHono";
 import { deleteCookie } from "hono/cookie";
 
 const logoutRouter = new AppBindingsHono();

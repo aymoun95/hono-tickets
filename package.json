@@ -1,5 +1,5 @@
 {
-  "name": "hono-tickets-app",
+  "name": "hono-tickets",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "generate": "bunx drizzle-kit generate",

@@ -1,6 +1,6 @@
-import { logger } from "hono/logger";
 import "@/lib/config";
-import { AppBindingsHono } from "./lib/types";
+import { logger } from "hono/logger";
+import { AppBindingsHono } from "./lib/AppBindingsHono";
 import { currentUser } from "./middlewares/current-user";
 import { errorHandler } from "./middlewares/error-handler";
 import {

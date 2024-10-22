@@ -5,9 +5,9 @@ import {
 	usersWithExcludedPassword,
 } from "@/db/schema/users";
 import { BadRequestError } from "@/errors/bad-request-error";
+import { AppBindingsHono } from "@/lib/AppBindingsHono";
 import { env } from "@/lib/config";
 import { Password } from "@/lib/password";
-import { AppBindingsHono } from "@/lib/types";
 import { zValidator } from "@hono/zod-validator";
 import { eq } from "drizzle-orm";
 import { setCookie } from "hono/cookie";

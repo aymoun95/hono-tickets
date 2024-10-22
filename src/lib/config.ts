@@ -11,7 +11,7 @@ const EnvSchema = z.object({
 let env: z.infer<typeof EnvSchema>;
 
 try {
-	// biome-ignore lint/nursery/noProcessEnv: only here so we can
+	// biome-ignore lint/nursery/noProcessEnv: we use it here so we can parse it
 	env = EnvSchema.parse(process.env);
 } catch (e) {
 	const error = e as ZodError;

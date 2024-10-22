@@ -1,6 +1,6 @@
 import db from "@/db";
 import { insertTicketsSchema, ticketsTable } from "@/db/schema/tickets";
-import { AppBindingsHono } from "@/lib/types";
+import { AppBindingsHono } from "@/lib/AppBindingsHono";
 import { requireAuth } from "@/middlewares/require-auth";
 import { zValidator } from "@hono/zod-validator";
 

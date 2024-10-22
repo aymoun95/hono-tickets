@@ -1,4 +1,4 @@
-import { AppBindingsHono } from "@/lib/types";
+import { AppBindingsHono } from "@/lib/AppBindingsHono";
 import { currentUser } from "@/middlewares/current-user";
 
 const currentUserRouter = new AppBindingsHono();
