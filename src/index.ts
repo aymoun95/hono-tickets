@@ -1,4 +1,5 @@
 import "@/lib/config";
+import { env } from "@/lib/config";
 import { logger } from "hono/logger";
 import { AppBindingsHono } from "./lib/AppBindingsHono";
 import { currentUser } from "./middlewares/current-user";
@@ -19,7 +20,10 @@ import {
 
 const app = new AppBindingsHono({ strict: false });
 
-app.use(logger());
+app.use(async (c, next) => {
+	if (env.NODE_ENV !== "test") logger();
+	await next();
+});
 app.use("/admin/*", currentUser);
 
 const routes = [

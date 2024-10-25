@@ -44,7 +44,7 @@ registerRouter.post(
 		const userJwt = await sign(userJwtPayload, env.JWT_KEY);
 		setCookie(c, "token", userJwt);
 
-		return c.json({ user: userJwtPayload });
+		return c.json({ user: userJwtPayload }, 201);
 	},
 );
 

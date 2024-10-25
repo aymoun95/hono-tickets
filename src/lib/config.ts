@@ -3,7 +3,7 @@ import { z } from "zod";
 import type { ZodError } from "zod";
 
 const EnvSchema = z.object({
-	NODE_ENV: z.string().default("default"),
+	NODE_ENV: z.string().default("development"),
 	JWT_KEY: z.string(),
 	DB_FILE_NAME: z.string(),
 });
