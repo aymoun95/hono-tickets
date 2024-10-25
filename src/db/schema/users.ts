@@ -18,6 +18,8 @@ export const usersTable = sqliteTable("users", {
 // Schema for inserting a user - can be used to validate API requests
 export const insertUserSchema = createInsertSchema(usersTable, {
 	age: z.coerce.number(),
+	email: z.string().email(),
+	password: z.string().min(4).max(20),
 });
 // Schema for selecting a user - can be used to validate API responses
 export const selectUserSchema = createSelectSchema(usersTable).omit({
