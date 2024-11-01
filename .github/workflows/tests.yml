@@ -5,6 +5,9 @@ on: pull_request
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      JWT_KEY: ${{ secrets.JWT_KEY }}
+      DB_FILE_NAME: ${{ secrets.DB_FILE_NAME }}
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
