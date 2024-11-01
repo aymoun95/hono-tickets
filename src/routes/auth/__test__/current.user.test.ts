@@ -13,7 +13,6 @@ describe("current user", () => {
 		});
 		const response = await res.json();
 
-		console.log("response", response);
 		expect(response.currentUser.email).toEqual("test@test.com");
 	});
 

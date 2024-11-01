@@ -7,7 +7,8 @@
     "lint": "biome check src",
     "format": "biome check --write src",
     "prepare": "husky",
-    "test":"bun test --watch --preload ./src/test/setup.ts"
+    "test":"bun test --watch --preload ./src/test/setup.ts",
+    "test:ci":"bun test --preload ./src/test/setup.ts"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.4.1",
