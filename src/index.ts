@@ -1,4 +1,3 @@
-import "@/lib/config";
 import { env } from "@/lib/config";
 import { logger } from "hono/logger";
 import { AppBindingsHono } from "./lib/AppBindingsHono";
