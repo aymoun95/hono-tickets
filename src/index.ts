@@ -50,6 +50,7 @@ protectedRoutes.forEach((route) => {
 app.onError(errorHandler);
 
 app.notFound((c) => {
+	console.log("NOT FOUND!!!");
 	return c.text("Not Found", 404);
 });
 
