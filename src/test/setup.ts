@@ -18,6 +18,9 @@ async function resetDB() {
 	}
 }
 
+
+
+
 beforeAll(async () => {
 	runMigrations().catch((e) => {
 		console.error("Migration failed");
